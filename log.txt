@@ -1,0 +1,892 @@
+06 ��� 2014 20:35:02.863 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	T
+06 ��� 2014 20:35:02.876 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	I
+06 ��� 2014 20:35:02.877 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	D
+06 ��� 2014 20:35:02.877 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	T
+06 ��� 2014 20:35:02.878 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	T
+06 ��� 2014 20:35:02.878 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	T
+06 ��� 2014 20:35:02.878 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	Y
+06 ��� 2014 20:36:11.657 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	T
+06 ��� 2014 20:36:11.662 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	I
+06 ��� 2014 20:36:11.663 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	D
+06 ��� 2014 20:36:11.663 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	T
+06 ��� 2014 20:36:11.664 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	T
+06 ��� 2014 20:36:11.664 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	T
+06 ��� 2014 20:36:11.664 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	Y
+06 ��� 2014 20:39:21.195 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then statement is the most basic of all the control flow statements. It tells your program 
+to execute a certain section of code only if a particular test evaluates to true. For example, the 
+Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already 
+in motion. One possible implementation of the applyBrakes method could be as follows.
+~:
+void applyBrakes() { 
+    // the "if" clause: bicycle must be moving 
+    if (isMoving){  
+        // the "then" clause: decrease current speed 
+        currentSpeed--; 
+    } 
+} 
+:~
+	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the 
+end of the if-then statement. 
+In addition, the opening and closing braces are optional, provided that the "then" clause contains 
+only one statement. 
+~:
+void applyBrakes() { 
+    // same as above, but without braces  
+    if (isMoving) 
+        currentSpeed--; 
+} 
+:~
+	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code 
+more brittle. If a second statement is later added to the "then" clause, a common mistake would 
+be forgetting to add the newly required braces. The compiler cannot catch this com.epam.textparser.sort of error;
+you'll just get the wrong results. 
+	The if-then-else statement provides a secondary path of execution when an "if" clause 
+evaluates to false. You could use an if-then-else statement in the applyBrakes method to 
+take some action if the brakes are applied when the bicycle is not in motion. In this case, the 
+action is to simply print an error message stating that the bicycle has already stopped. 
+~:
+void applyBrakes() { 
+    if (isMoving) { 
+        currentSpeed--; 
+    } else { 
+        System.err.println("The bicycle has already stopped!"); 
+    }  
+} 
+:~
+	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for 
+a score of 90% or above, a B for a score of 80% or above, and so on. 
+~:
+class IfElseDemo { 
+    public static void main(String[] args) { 
+ 
+        int testscore = 76; 
+        char grade; 
+ 
+        if (testscore >= 90) { 
+            grade = 'A'; 
+        } else if (testscore >= 80) {   
+            grade = 'B'; 
+        } else if (testscore >= 70) { 
+            grade = 'C'; 
+        } else if (testscore >= 60) { 
+            grade = 'D'; 
+        } else { 
+            grade = 'F'; 
+        } 
+        System.out.println("Grade = " + grade); 
+    } 
+} 
+:~
+	The output from the program is: Grade = C.
+	You may have noticed that the value of testscore can satisfy more than one expression in the 
+compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied, the 
+appropriate statements are executed (grade = 'C';) and the remaining conditions are not 
+evaluated.
+
+06 ��� 2014 20:39:21.198 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The if-then statement is the most basic of all the control flow statements. It tells your program 
+to execute a certain section of code only if a particular test evaluates to true. For example, the 
+Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already 
+in motion. One possible implementation of the applyBrakes method could be as follows.
+~:
+void applyBrakes() { 
+    // the "if" clause: bicycle must be moving 
+    if (isMoving){  
+        // the "then" clause: decrease current speed 
+        currentSpeed--; 
+    } 
+} 
+:~
+	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the 
+end of the if-then statement. 
+In addition, the opening and closing braces are optional, provided that the "then" clause contains 
+only one statement. 
+~:
+void applyBrakes() { 
+    // same as above, but without braces  
+    if (isMoving) 
+        currentSpeed--; 
+} 
+:~
+	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code 
+more brittle. If a second statement is later added to the "then" clause, a common mistake would 
+be forgetting to add the newly required braces. The compiler cannot catch this com.epam.textparser.sort of error;
+you'll just get the wrong results. 
+	The if-then-else statement provides a secondary path of execution when an "if" clause 
+evaluates to false. You could use an if-then-else statement in the applyBrakes method to 
+take some action if the brakes are applied when the bicycle is not in motion. In this case, the 
+action is to simply print an error message stating that the bicycle has already stopped. 
+~:
+void applyBrakes() { 
+    if (isMoving) { 
+        currentSpeed--; 
+    } else { 
+        System.err.println("The bicycle has already stopped!"); 
+    }  
+} 
+:~
+	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for 
+a score of 90% or above, a B for a score of 80% or above, and so on. 
+~:
+class IfElseDemo { 
+    public static void main(String[] args) { 
+ 
+        int testscore = 76; 
+        char grade; 
+ 
+        if (testscore >= 90) { 
+            grade = 'A'; 
+        } else if (testscore >= 80) {   
+            grade = 'B'; 
+        } else if (testscore >= 70) { 
+            grade = 'C'; 
+        } else if (testscore >= 60) { 
+            grade = 'D'; 
+        } else { 
+            grade = 'F'; 
+        } 
+        System.out.println("Grade = " + grade); 
+    } 
+} 
+:~
+	The output from the program is: Grade = C.
+	You may have noticed that the value of testscore can satisfy more than one expression in the 
+compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied, the 
+appropriate statements are executed (grade = 'C';) and the remaining conditions are not 
+evaluated.
+06 ��� 2014 21:09:50.821 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then statement is the most basic of all the control flow statements. It tells your program 
+to execute a certain section of code only if a particular test evaluates to true. For example, the 
+Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already 
+in motion. One possible implementation of the applyBrakes method could be as follows.
+~:
+void applyBrakes() { 
+    // the "if" clause: bicycle must be moving 
+    if (isMoving){  
+        // the "then" clause: decrease current speed 
+        currentSpeed--; 
+    } 
+} 
+:~
+
+06 ��� 2014 21:11:19.814 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then statement is the most basic of all the control flow statements. It tells your program 
+to execute a certain section of code only if a particular test evaluates to true. For example, the 
+Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already 
+in motion. One possible implementation of the applyBrakes method could be as follows.
+~:
+void applyBrakes() { 
+    // the "if" clause: bicycle must be moving 
+    if (isMoving){  
+        // the "then" clause: decrease current speed 
+        currentSpeed--; 
+    } 
+} 
+:~
+
+06 ��� 2014 21:11:47.801 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then statement is the most basic of all the control flow statements. It tells your program 
+to execute a certain section of code only if a particular test evaluates to true. For example, the 
+Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already 
+in motion. One possible implementation of the applyBrakes method could be as follows.
+~:
+void applyBrakes() { 
+    // the "if" clause: bicycle must be moving 
+    if (isMoving){  
+        // the "then" clause: decrease current speed 
+        currentSpeed--; 
+    } 
+} 
+:~
+
+06 ��� 2014 21:22:49.327 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then statement is the most basic of all the control flow statements.
+06 ��� 2014 21:22:49.330 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The if-then statement is the most basic of all the control flow statements.
+06 ��� 2014 21:22:49.331 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	It tells your program to execute a certain section of code only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion.
+06 ��� 2014 21:22:49.331 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: It tells your program to execute a certain section of code only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion.
+06 ��� 2014 21:22:49.332 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains only one statement.
+06 ��� 2014 21:22:49.332 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains only one statement.
+06 ��� 2014 21:22:49.333 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle.
+06 ��� 2014 21:22:49.333 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle.
+06 ��� 2014 21:22:49.334 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then-else statement provides a secondary path of execution when an "if" clause evaluates to false. You could use an if-then-else statement in the applyBrakes method to take some action if the brakes are applied when the bicycle is not in motion.
+06 ��� 2014 21:22:49.334 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The if-then-else statement provides a secondary path of execution when an "if" clause evaluates to false. You could use an if-then-else statement in the applyBrakes method to take some action if the brakes are applied when the bicycle is not in motion.
+06 ��� 2014 21:22:49.334 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.
+06 ��� 2014 21:22:49.335 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.
+06 ��� 2014 21:22:49.335 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The output from the program is: Grade = C.
+06 ��� 2014 21:22:49.335 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The output from the program is: Grade = C.
+06 ��� 2014 21:22:49.336 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	You may have noticed that the value of testscore can satisfy more than one expression in the compound statement.
+06 ��� 2014 21:22:49.336 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: You may have noticed that the value of testscore can satisfy more than one expression in the compound statement.
+06 ��� 2014 21:23:26.243 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion.
+06 ��� 2014 21:23:26.246 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The if-then statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion.
+06 ��� 2014 21:23:26.246 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains only one statement.
+06 ��� 2014 21:23:26.247 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains only one statement.
+06 ��� 2014 21:23:26.247 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle.
+06 ��� 2014 21:23:26.248 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle.
+06 ��� 2014 21:23:26.248 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then-else statement provides a secondary path of execution when an "if" clause evaluates to false. You could use an if-then-else statement in the applyBrakes method to take some action if the brakes are applied when the bicycle is not in motion.
+06 ��� 2014 21:23:26.249 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The if-then-else statement provides a secondary path of execution when an "if" clause evaluates to false. You could use an if-then-else statement in the applyBrakes method to take some action if the brakes are applied when the bicycle is not in motion.
+06 ��� 2014 21:23:26.249 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.
+06 ��� 2014 21:23:26.250 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.
+06 ��� 2014 21:23:26.250 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The output from the program is: Grade = C.
+06 ��� 2014 21:23:26.250 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The output from the program is: Grade = C.
+06 ��� 2014 21:23:26.251 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	You may have noticed that the value of testscore can satisfy more than one expression in the compound statement.
+06 ��� 2014 21:23:26.251 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: You may have noticed that the value of testscore can satisfy more than one expression in the compound statement.
+06 ��� 2014 21:26:51.245 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion.
+06 ��� 2014 21:26:51.247 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The if-then statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion.
+06 ��� 2014 21:26:51.248 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains only one statement.
+06 ��� 2014 21:26:51.248 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains only one statement.
+06 ��� 2014 21:26:51.248 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle.
+06 ��� 2014 21:26:51.249 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle.
+06 ��� 2014 21:26:51.249 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The if-then-else statement provides a secondary path of execution when an "if" clause evaluates to false. You could use an if-then-else statement in the applyBrakes method to take some action if the brakes are applied when the bicycle is not in motion.
+06 ��� 2014 21:26:51.249 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The if-then-else statement provides a secondary path of execution when an "if" clause evaluates to false. You could use an if-then-else statement in the applyBrakes method to take some action if the brakes are applied when the bicycle is not in motion.
+06 ��� 2014 21:26:51.249 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.
+06 ��� 2014 21:26:51.250 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.
+06 ��� 2014 21:26:51.250 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	The output from the program is: Grade = C.
+06 ��� 2014 21:26:51.250 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: The output from the program is: Grade = C.
+06 ��� 2014 21:26:51.250 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph:	You may have noticed that the value of testscore can satisfy more than one expression in the compound statement.
+06 ��� 2014 21:26:51.251 [INFO] [main] [com.epam.textparser.parser.TextParser] - Sentence: You may have noticed that the value of testscore can satisfy more than one expression in the compound statement.
+07 ��� 2014 05:13:41.997 [INFO] [main] [com.epam.textparser.parser.TextParser] - paragraph found 	The if-then statement is the most basic. Of all the control flow statements. It tells your program to execute a certain section of code. Only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already.
+07 ��� 2014 05:13:41.999 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found The if-then statement is the most basic. Of all the control flow statements. It tells your program to execute a certain section of code. Only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already.
+07 ��� 2014 05:13:42.001 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Punctuation mark found.
+07 ��� 2014 05:13:42.001 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Punctuation mark found.
+07 ��� 2014 05:13:42.003 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Punctuation mark found.
+07 ��� 2014 05:13:42.003 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Punctuation mark found.
+07 ��� 2014 05:13:42.004 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Punctuation mark found,
+07 ��� 2014 05:13:42.005 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Punctuation mark found.
+07 ��� 2014 05:13:42.005 [INFO] [main] [com.epam.textparser.parser.TextParser] - paragraph found 	One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 05:13:42.005 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 05:13:42.005 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Punctuation mark found.
+07 ��� 2014 05:13:42.006 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found ~:
+void applyBrakes() { 
+    // the "if" clause: bicycle must be moving 
+    if (isMoving){  
+        // the "then" clause: decrease current speed 
+        currentSpeed--; 
+    } 
+}
+:~
+07 ��� 2014 05:20:05.994 [INFO] [main] [com.epam.textparser.parser.TextParser] - paragraph found 	The if-then statement is the most basic. Of all the control flow statements. It tells your program to execute a certain section of code. Only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already.
+07 ��� 2014 05:20:05.997 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found The if-then statement is the most basic. Of all the control flow statements. It tells your program to execute a certain section of code. Only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already.
+07 ��� 2014 05:20:05.998 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:20:05.998 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:20:06.000 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:20:06.000 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:20:06.001 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found,
+07 ��� 2014 05:20:06.001 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:20:06.002 [INFO] [main] [com.epam.textparser.parser.TextParser] - paragraph found 	One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 05:20:06.002 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 05:20:06.002 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:20:06.004 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found 
+~:
+void applyBrakes() { 
+    // the "if" clause: bicycle must be moving 
+    if (isMoving){  
+        // the "then" clause: decrease current speed 
+        currentSpeed--; 
+    } 
+}
+:~
+07 ��� 2014 05:25:26.562 [INFO] [main] [com.epam.textparser.parser.TextParser] - paragraph found 	The if-then statement is the most basic. Of all the control flow statements. It tells your program to execute a certain section of code. Only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already.
+07 ��� 2014 05:25:26.565 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found The if-then statement is the most basic. Of all the control flow statements. It tells your program to execute a certain section of code. Only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already.
+07 ��� 2014 05:25:26.566 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:25:26.567 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:25:26.568 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:25:26.568 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:25:26.569 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found,
+07 ��� 2014 05:25:26.570 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:25:26.571 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found 
+~:
+void applyBrakes() {
+    // the "if" clause: bicycle must be moving
+    if (isMoving){
+        // the "then" clause: decrease current speed
+        currentSpeed--;
+    }
+}
+:~
+07 ��� 2014 05:37:08.395 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+	The if-then statement is the most basic. Of all the control flow statements. It tells your program to execute a certain section of code. Only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already.
+    One possible implementation of the applyBrakes method could be as follows.
+~:
+void applyBrakes() {
+    // the "if" clause: bicycle must be moving
+    if (isMoving){
+        // the "then" clause: decrease current speed
+        currentSpeed--;
+    }
+}
+:~
+
+07 ��� 2014 05:37:29.906 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic. Of all the control flow statements. It tells your program to execute a certain section of code. Only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already.
+07 ��� 2014 05:37:29.908 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The if-then statement is the most basic. Of all the control flow statements. It tells your program to execute a certain section of code. Only if a particular test evaluates to true. For example, the Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already.
+07 ��� 2014 05:37:29.909 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:37:29.910 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:37:29.911 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:37:29.911 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:37:29.913 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found,
+07 ��� 2014 05:37:29.915 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found.
+07 ��� 2014 05:37:29.915 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+~:
+void applyBrakes() {
+    // the "if" clause: bicycle must be moving
+    if (isMoving){
+        // the "then" clause: decrease current speed
+        currentSpeed--;
+    }
+}
+:~
+07 ��� 2014 05:47:03.735 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. A certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 05:47:03.738 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. A certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 05:47:03.739 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.740 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.741 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.742 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.743 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.743 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.743 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 05:47:03.744 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 05:47:03.745 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.745 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.745 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+~:void applyBrakes() { 
+    // the "if" clause: bicycle must be moving 
+    if (isMoving){  
+        // the "then" clause: decrease current speed 
+        currentSpeed--; 
+    } 
+}:~
+07 ��� 2014 05:47:03.746 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 05:47:03.746 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 05:47:03.747 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.747 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.747 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.747 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.748 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.748 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+~:void applyBrakes() { 
+    // same as above, but without braces  
+    if (isMoving) 
+        currentSpeed--; 
+}:~
+07 ��� 2014 05:47:03.748 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 05:47:03.749 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 05:47:03.750 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.758 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.758 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.758 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.759 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 05:47:03.759 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 05:47:03.765 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.766 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.766 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.766 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+~:void applyBrakes() { 
+    if (isMoving) { 
+        currentSpeed--; 
+    } else { 
+        System.err.println("The bicycle has already stopped!"); 
+    }  
+}:~
+07 ��� 2014 05:47:03.766 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 05:47:03.766 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.
+07 ��� 2014 05:47:03.767 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.770 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.770 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: :
+07 ��� 2014 05:47:03.771 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.771 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.771 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.771 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+~:class IfElseDemo { 
+    public static void main(String[] args) { 
+ 
+        int testscore = 76; 
+        char grade; 
+ 
+        if (testscore >= 90) { 
+            grade = 'A'; 
+        } else if (testscore >= 80) {   
+            grade = 'B'; 
+        } else if (testscore >= 70) { 
+            grade = 'C'; 
+        } else if (testscore >= 60) { 
+            grade = 'D'; 
+        } else { 
+            grade = 'F'; 
+        } 
+        System.out.println("Grade = " + grade); 
+    } 
+}:~
+07 ��� 2014 05:47:03.781 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 05:47:03.783 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 05:47:03.783 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.783 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: :
+07 ��� 2014 05:47:03.783 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.783 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 05:47:03.783 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 05:47:03.784 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 05:47:03.784 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 05:47:03.784 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ;
+07 ��� 2014 05:47:03.785 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.613 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. A certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 06:01:59.616 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. A certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 06:01:59.617 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.618 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.619 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.619 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.621 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.621 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.622 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 06:01:59.622 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 06:01:59.623 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.623 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.624 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 06:01:59.624 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 06:01:59.624 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.625 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.625 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.625 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.625 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.626 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 06:01:59.627 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 06:01:59.627 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.628 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.628 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.636 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.636 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 06:01:59.636 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 06:01:59.640 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.640 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.640 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.643 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 06:01:59.643 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.
+07 ��� 2014 06:01:59.644 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.644 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.645 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: :
+07 ��� 2014 06:01:59.645 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.646 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.647 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.647 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 06:01:59.647 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 06:01:59.647 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.647 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: :
+07 ��� 2014 06:01:59.648 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.648 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 06:01:59.648 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:01:59.649 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 06:01:59.650 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 06:01:59.650 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ;
+07 ��� 2014 06:01:59.650 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 06:03:27.085 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. A certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 06:03:27.087 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 06:03:27.089 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 06:03:27.090 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 06:03:27.092 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 06:03:27.092 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 06:03:27.093 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 06:03:27.093 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 06:12:26.537 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. A certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 06:12:26.540 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 06:12:26.542 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 06:12:26.544 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 06:12:26.545 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 06:12:26.545 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 06:12:26.546 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 06:12:26.546 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 06:29:18.926 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. A certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 06:29:18.930 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 06:29:18.931 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 06:29:18.932 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 06:29:18.932 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 06:29:18.932 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 06:29:18.934 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 06:29:18.935 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 06:32:46.776 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. A certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 06:32:46.780 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 06:32:46.780 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 06:32:46.781 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 06:32:46.782 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 06:32:46.782 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 06:32:46.782 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 06:32:46.786 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 06:34:25.089 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. The certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 06:34:25.092 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 06:34:25.093 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 06:34:25.094 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 06:34:25.094 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 06:34:25.094 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 06:34:25.095 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 06:34:25.095 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 06:35:40.678 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. The certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 06:35:40.680 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:35:40.682 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:35:40.683 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 06:35:40.684 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 06:35:40.684 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 06:35:40.685 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 06:35:40.685 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:35:40.685 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 06:35:40.685 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:35:40.686 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 06:35:40.687 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:35:40.687 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 06:37:06.637 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. The certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 06:37:06.639 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:37:06.640 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:37:06.642 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 06:37:06.642 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 06:37:06.643 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 06:37:06.643 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 06:37:06.643 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:37:06.643 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 06:37:06.644 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:37:06.644 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 06:37:06.644 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The
+07 ��� 2014 06:37:06.645 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 07:27:11.374 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then statement is the most basic of. All the control flow statements. It tells your program to execute. The certain section of code only if a particular test evaluates to true. For example, is dsfds.
+07 ��� 2014 07:27:11.376 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The if-then statement is the most basic of.
+07 ��� 2014 07:27:11.377 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: The
+07 ��� 2014 07:27:11.379 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: if-then
+07 ��� 2014 07:27:11.379 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: statement
+07 ��� 2014 07:27:11.380 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: is
+07 ��� 2014 07:27:11.380 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.380 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: most
+07 ��� 2014 07:27:11.380 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: basic
+07 ��� 2014 07:27:11.380 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.380 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.381 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: All the control flow statements.
+07 ��� 2014 07:27:11.382 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: All
+07 ��� 2014 07:27:11.382 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.383 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: control
+07 ��� 2014 07:27:11.383 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: flow
+07 ��� 2014 07:27:11.384 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: statements
+07 ��� 2014 07:27:11.384 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.384 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: It tells your program to execute.
+07 ��� 2014 07:27:11.385 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: It
+07 ��� 2014 07:27:11.385 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: tells
+07 ��� 2014 07:27:11.386 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: your
+07 ��� 2014 07:27:11.387 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: program
+07 ��� 2014 07:27:11.387 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: to
+07 ��� 2014 07:27:11.394 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: execute
+07 ��� 2014 07:27:11.394 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.395 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The certain section of code only if a particular test evaluates to true.
+07 ��� 2014 07:27:11.395 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: The
+07 ��� 2014 07:27:11.395 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: certain
+07 ��� 2014 07:27:11.396 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: section
+07 ��� 2014 07:27:11.396 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.397 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: code
+07 ��� 2014 07:27:11.397 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: only
+07 ��� 2014 07:27:11.397 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: if
+07 ��� 2014 07:27:11.397 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.397 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: particular
+07 ��� 2014 07:27:11.397 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: test
+07 ��� 2014 07:27:11.397 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: evaluates
+07 ��� 2014 07:27:11.400 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: to
+07 ��� 2014 07:27:11.401 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: true
+07 ��� 2014 07:27:11.402 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.403 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: For example, is dsfds.
+07 ��� 2014 07:27:11.403 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: For
+07 ��� 2014 07:27:11.404 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: example
+07 ��� 2014 07:27:11.404 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.404 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: is
+07 ��� 2014 07:27:11.405 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: dsfds
+07 ��� 2014 07:27:11.405 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.405 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 07:27:11.406 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Bicycle class could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion.
+07 ��� 2014 07:27:11.407 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: Bicycle
+07 ��� 2014 07:27:11.407 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: class
+07 ��� 2014 07:27:11.408 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: could
+07 ��� 2014 07:27:11.408 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: allow
+07 ��� 2014 07:27:11.411 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.411 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: brakes
+07 ��� 2014 07:27:11.411 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: to
+07 ��� 2014 07:27:11.411 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: decrease
+07 ��� 2014 07:27:11.411 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.411 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: bicycle
+07 ��� 2014 07:27:11.412 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: s
+07 ��� 2014 07:27:11.412 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: speed
+07 ��� 2014 07:27:11.412 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: only
+07 ��� 2014 07:27:11.412 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: if
+07 ��� 2014 07:27:11.413 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.415 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: bicycle
+07 ��� 2014 07:27:11.415 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: is
+07 ��� 2014 07:27:11.415 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: already
+07 ��� 2014 07:27:11.415 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: in
+07 ��� 2014 07:27:11.416 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: motion
+07 ��� 2014 07:27:11.416 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.416 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: One possible implementation of the applyBrakes method could be as follows.
+07 ��� 2014 07:27:11.417 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: One
+07 ��� 2014 07:27:11.417 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: possible
+07 ��� 2014 07:27:11.417 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: implementation
+07 ��� 2014 07:27:11.418 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.418 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.418 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: applyBrakes
+07 ��� 2014 07:27:11.418 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: method
+07 ��� 2014 07:27:11.419 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: could
+07 ��� 2014 07:27:11.419 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: be
+07 ��� 2014 07:27:11.419 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: as
+07 ��� 2014 07:27:11.419 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: follows
+07 ��� 2014 07:27:11.419 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.420 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+~:void applyBrakes() {
+    // the "if" clause: bicycle must be moving 
+    if (isMoving){  
+        // the "then" clause: decrease current speed 
+        currentSpeed--; 
+    } 
+}:~
+07 ��� 2014 07:27:11.424 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement. In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 07:27:11.425 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement.
+07 ��� 2014 07:27:11.428 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: If
+07 ��� 2014 07:27:11.428 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: this
+07 ��� 2014 07:27:11.428 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: test
+07 ��� 2014 07:27:11.428 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: evaluates
+07 ��� 2014 07:27:11.428 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: to
+07 ��� 2014 07:27:11.428 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: false
+07 ��� 2014 07:27:11.429 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: meaning
+07 ��� 2014 07:27:11.429 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: that
+07 ��� 2014 07:27:11.429 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.429 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: bicycle
+07 ��� 2014 07:27:11.430 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: is
+07 ��� 2014 07:27:11.430 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: not
+07 ��� 2014 07:27:11.430 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: in
+07 ��� 2014 07:27:11.431 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: motion
+07 ��� 2014 07:27:11.432 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.433 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: control
+07 ��� 2014 07:27:11.434 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: jumps
+07 ��� 2014 07:27:11.435 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: to
+07 ��� 2014 07:27:11.435 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.436 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: end
+07 ��� 2014 07:27:11.437 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.437 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.438 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: if-then
+07 ��� 2014 07:27:11.441 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: statement
+07 ��� 2014 07:27:11.442 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.442 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: In addition, the opening and closing braces are optional, provided that the "then" clause contains.
+07 ��� 2014 07:27:11.442 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: In
+07 ��� 2014 07:27:11.443 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: addition
+07 ��� 2014 07:27:11.444 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.444 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.445 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: opening
+07 ��� 2014 07:27:11.445 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: and
+07 ��� 2014 07:27:11.446 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: closing
+07 ��� 2014 07:27:11.446 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: braces
+07 ��� 2014 07:27:11.447 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: are
+07 ��� 2014 07:27:11.447 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: optional
+07 ��� 2014 07:27:11.449 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.449 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: provided
+07 ��� 2014 07:27:11.449 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: that
+07 ��� 2014 07:27:11.449 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.449 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: then
+07 ��� 2014 07:27:11.462 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: clause
+07 ��� 2014 07:27:11.462 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: contains
+07 ��� 2014 07:27:11.462 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.462 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+~:void applyBrakes() { 
+    // same as above, but without braces  
+    if (isMoving) 
+        currentSpeed--; 
+}:~
+07 ��� 2014 07:27:11.463 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 07:27:11.463 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Deciding when to omit the braces is a matter of personal taste.
+07 ��� 2014 07:27:11.463 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: Deciding
+07 ��� 2014 07:27:11.463 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: when
+07 ��� 2014 07:27:11.463 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: to
+07 ��� 2014 07:27:11.463 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: omit
+07 ��� 2014 07:27:11.464 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.464 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: braces
+07 ��� 2014 07:27:11.464 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: is
+07 ��� 2014 07:27:11.464 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.464 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: matter
+07 ��� 2014 07:27:11.464 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.464 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: personal
+07 ��� 2014 07:27:11.464 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: taste
+07 ��� 2014 07:27:11.464 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.465 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Omitting them can make the code more brittle.
+07 ��� 2014 07:27:11.465 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: Omitting
+07 ��� 2014 07:27:11.465 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: them
+07 ��� 2014 07:27:11.465 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: can
+07 ��� 2014 07:27:11.465 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: make
+07 ��� 2014 07:27:11.465 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.469 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: code
+07 ��� 2014 07:27:11.469 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: more
+07 ��� 2014 07:27:11.469 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: brittle
+07 ��� 2014 07:27:11.469 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.470 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: If a second statement is later added to the "then" clause, a common mistake would.
+07 ��� 2014 07:27:11.471 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: If
+07 ��� 2014 07:27:11.471 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.472 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: second
+07 ��� 2014 07:27:11.472 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: statement
+07 ��� 2014 07:27:11.472 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: is
+07 ��� 2014 07:27:11.472 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: later
+07 ��� 2014 07:27:11.472 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: added
+07 ��� 2014 07:27:11.472 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: to
+07 ��� 2014 07:27:11.472 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.472 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: then
+07 ��� 2014 07:27:11.472 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: clause
+07 ��� 2014 07:27:11.473 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.473 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.473 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: common
+07 ��� 2014 07:27:11.473 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: mistake
+07 ��� 2014 07:27:11.473 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: would
+07 ��� 2014 07:27:11.473 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.473 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The if-then-else statement provides a secondary path of execution when an "if" clause. Evaluates to false. You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 07:27:11.474 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The if-then-else statement provides a secondary path of execution when an "if" clause.
+07 ��� 2014 07:27:11.474 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: The
+07 ��� 2014 07:27:11.474 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: if-then
+07 ��� 2014 07:27:11.477 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: else
+07 ��� 2014 07:27:11.477 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: statement
+07 ��� 2014 07:27:11.477 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: provides
+07 ��� 2014 07:27:11.477 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.477 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: secondary
+07 ��� 2014 07:27:11.478 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: path
+07 ��� 2014 07:27:11.478 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.478 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: execution
+07 ��� 2014 07:27:11.478 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: when
+07 ��� 2014 07:27:11.478 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: an
+07 ��� 2014 07:27:11.478 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: if
+07 ��� 2014 07:27:11.478 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: clause
+07 ��� 2014 07:27:11.478 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.483 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Evaluates to false.
+07 ��� 2014 07:27:11.483 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: Evaluates
+07 ��� 2014 07:27:11.483 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: to
+07 ��� 2014 07:27:11.483 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: false
+07 ��� 2014 07:27:11.484 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.484 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: You could use an if-then-else statement in the applyBrakes method to.
+07 ��� 2014 07:27:11.485 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: You
+07 ��� 2014 07:27:11.486 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: could
+07 ��� 2014 07:27:11.486 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: use
+07 ��� 2014 07:27:11.486 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: an
+07 ��� 2014 07:27:11.486 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: if-then
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: else
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: statement
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: in
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: applyBrakes
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: method
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: to
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+~:void applyBrakes() { 
+    if (isMoving) { 
+        currentSpeed--; 
+    } else { 
+        System.err.println("The bicycle has already stopped!"); 
+    }  
+}:~
+07 ��� 2014 07:27:11.487 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on. 	
+07 ��� 2014 07:27:11.490 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.
+07 ��� 2014 07:27:11.490 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: The
+07 ��� 2014 07:27:11.490 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: following
+07 ��� 2014 07:27:11.490 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: program
+07 ��� 2014 07:27:11.490 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.491 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: IfElseDemo
+07 ��� 2014 07:27:11.491 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.491 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: assigns
+07 ��� 2014 07:27:11.491 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.491 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: grade
+07 ��� 2014 07:27:11.491 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: based
+07 ��� 2014 07:27:11.492 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: on
+07 ��� 2014 07:27:11.492 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.492 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: value
+07 ��� 2014 07:27:11.493 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.493 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.493 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: test
+07 ��� 2014 07:27:11.493 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: score
+07 ��� 2014 07:27:11.493 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: :
+07 ��� 2014 07:27:11.493 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: an
+07 ��� 2014 07:27:11.493 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: A
+07 ��� 2014 07:27:11.494 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: for
+07 ��� 2014 07:27:11.495 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.495 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: score
+07 ��� 2014 07:27:11.495 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.495 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: or
+07 ��� 2014 07:27:11.495 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: above
+07 ��� 2014 07:27:11.495 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.496 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.498 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: B
+07 ��� 2014 07:27:11.498 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: for
+07 ��� 2014 07:27:11.498 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.498 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: score
+07 ��� 2014 07:27:11.498 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.498 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: or
+07 ��� 2014 07:27:11.500 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: above
+07 ��� 2014 07:27:11.500 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.500 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: and
+07 ��� 2014 07:27:11.500 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: so
+07 ��� 2014 07:27:11.500 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: on
+07 ��� 2014 07:27:11.501 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.502 [INFO] [main] [com.epam.textparser.parser.TextParser] - code found: 
+~:class IfElseDemo { 
+    public static void main(String[] args) { 
+ 
+        int testscore = 76; 
+        char grade; 
+ 
+        if (testscore >= 90) { 
+            grade = 'A'; 
+        } else if (testscore >= 80) {   
+            grade = 'B'; 
+        } else if (testscore >= 70) { 
+            grade = 'C'; 
+        } else if (testscore >= 60) { 
+            grade = 'D'; 
+        } else { 
+            grade = 'F'; 
+        } 
+        System.out.println("Grade = " + grade); 
+    } 
+}:~
+07 ��� 2014 07:27:11.504 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	The output from the program is Grade = C. You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied.
+07 ��� 2014 07:27:11.506 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: The output from the program is Grade = C.
+07 ��� 2014 07:27:11.507 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: The
+07 ��� 2014 07:27:11.507 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: output
+07 ��� 2014 07:27:11.507 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: from
+07 ��� 2014 07:27:11.507 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.507 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: program
+07 ��� 2014 07:27:11.507 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: is
+07 ��� 2014 07:27:11.507 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: Grade
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: C
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60.
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: You
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: may
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: have
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: noticed
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: that
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.508 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: value
+07 ��� 2014 07:27:11.509 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: of
+07 ��� 2014 07:27:11.509 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: testscore
+07 ��� 2014 07:27:11.509 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: can
+07 ��� 2014 07:27:11.509 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: satisfy
+07 ��� 2014 07:27:11.509 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: more
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: than
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: one
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: expression
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: in
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: compound
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: statement
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: :
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: and
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: However, once a condition is satisfied.
+07 ��� 2014 07:27:11.510 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: However
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ,
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: once
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: a
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: condition
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: is
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: satisfied
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.TextParser] - Paragraph found: 	Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.ParagraphParser] - Sentanse found: Appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: Appropriate
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: statements
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: are
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: executed
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: grade
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: C
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: ;
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: and
+07 ��� 2014 07:27:11.511 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: the
+07 ��� 2014 07:27:11.512 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: remaining
+07 ��� 2014 07:27:11.512 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: conditions
+07 ��� 2014 07:27:11.513 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: are
+07 ��� 2014 07:27:11.513 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: not
+07 ��� 2014 07:27:11.513 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Word found: evaluated
+07 ��� 2014 07:27:11.513 [INFO] [main] [com.epam.textparser.parser.SentanseParser] - Punctuation mark found: .
